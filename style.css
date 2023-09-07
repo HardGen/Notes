@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.main {
+    min-height: 100vh;
+    background-color: rgb(240, 240, 240);
+    position: relative;
+}
+
+.contextMenu {
+    position: absolute;
+    list-style: none;
+    display: none;
+    padding: 7px;
+    background-color: rgb(240, 240, 240);
+    box-shadow: 0 0 4px rgba(87, 87, 87, 0.322);
+    z-index: 100;
+}
+
+.contextMenu.active {
+    display: block;
+}
+
+.window {
+    background-color: white;
+    position: absolute;
+    z-index: 10;
+    cursor: pointer;
+    width: 250px;
+    min-height: 120px;
+    overflow: hidden;
+    box-shadow: 0 3px 5px rgba(113, 113, 113, 0.43);
+}
+
+.contextmenu__item {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 3px;
+}
+
+.contextmenu__item:hover {
+    background-color: white;
+}
+
+.window__header {
+    height: 35px;
+    box-shadow: 0 3px 5px rgba(113, 113, 113, 0.43);
+    background-color: blueviolet;
+}
+
+.window__textarea {
+    resize: none;
+    width: 100%;
+    outline: none;
+    border: none;
+    min-height: 95px;
+}
+
+.over {
+    z-index: 1000;
+}
