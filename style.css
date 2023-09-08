@@ -50,6 +50,11 @@
     height: 35px;
     box-shadow: 0 3px 5px rgba(113, 113, 113, 0.43);
     background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px;
+    justify-content: space-between;
 }
 
 .window__textarea {
@@ -62,4 +67,77 @@
 
 .over {
     z-index: 1000;
+}
+
+.header_menu {
+    width: 25px;
+    height: 25px;
+    background-color: none;
+    position: relative;
+}
+
+.header_menu span {
+    display: block;
+    background-color: white;
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    border: none;
+}
+
+.header_menu span:nth-child(1) {
+    top: 0px;
+}
+
+.header_menu span:nth-child(2) {
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.header_menu span:nth-child(3) {
+    bottom: 0px;
+}
+
+.win_close {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: none;
+    position: relative;
+}
+
+.win_close span {
+    display: block;
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+}   
+
+.win_close span:nth-child(1) {
+    transform: rotateZ(45deg);
+    transform-origin: center;
+}
+
+.win_close span:nth-child(2) {
+    transform: rotateZ(-45deg);
+    transform-origin: center;
+}
+
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.color_palate {
+    display: none;
+    flex-direction: row;
+    padding: 5px;
+    position: absolute;
+    z-index: 10000;
 }
