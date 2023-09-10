@@ -49,7 +49,6 @@
 .window__header {
     height: 35px;
     box-shadow: 0 3px 5px rgba(113, 113, 113, 0.43);
-    background-color: blueviolet;
     display: flex;
     flex-direction: row;
     align-items: center;
