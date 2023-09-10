@@ -278,9 +278,24 @@ function Win(options) {
         header.addEventListener('dragend', dragEnd.bind(this))
 
 
-        header.addEventListener('changePosition', function(event) {
-
-        })
+        header.addEventListener('changeColor', (function(event) {
+            const note = {
+                id: this.id,
+                color: event.detail.color,
+                content: this.content,
+                dateUpdate: Date.now(),
+                posX: parseInt(this.posX),
+                posY: parseInt(this.posY)
+            }
+            DB.updateNode(note, function(err, data) {
+                if(err) {
+                     console.error(err)
+                     return
+                }
+                this.color = event.detail.color
+                header.style.backgroundColor = this.color
+            })
+        }).bind(this))
 
         header_menuDiv.addEventListener('click', function (e) {
             ColorPalate.show(e.clientX, e.clientY, header)
@@ -339,6 +354,8 @@ function deleteNodeHandler(e) {
         this.destroy()
     })
 }
+
+
 
 
 var ColorPalate = {
